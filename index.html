@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Safe Indonesia - Solusi Proteksi Kebakaran Terpercaya</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Tailwind untuk font Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .nav-link {
+            cursor: pointer;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+        }
+        .nav-link.active {
+            background-color: #b91c1c; /* Tailwind red-700 */
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link:not(.active):hover {
+            background-color: #fecaca; /* Tailwind red-100 */
+            color: #b91c1c;
+        }
+        .btn-primary {
+            background-color: #b91c1c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #991b1b;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-[#b91c1c]">Fire Safe Indonesia</h1>
+            
+            <!-- Tombol Toggle Menu (Hanya terlihat di Mobile) -->
+            <button id="nav-toggle" onclick="toggleNav()" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-red-100 focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            
+            <!-- Navigasi Utama (Dropdown/Menu Bar) -->
+            <!-- Default hidden di mobile, flex di desktop (md:flex) -->
+            <nav id="navbar" class="hidden md:flex flex-col md:flex-row mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-4 w-full md:w-auto text-gray-700 items-center">
+                <div class="nav-link w-full md:w-auto text-center active" data-view="home">Beranda</div>
+                <div class="nav-link w-full md:w-auto text-center" data-view="products">Produk & Harga</div>
+                <div class="nav-link w-full md:w-auto text-center" data-view="qna">Tanya Jawab APAR</div>
+                <div class="nav-link w-full md:w-auto text-center" data-view="inquiry">Permintaan Penawaran</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- View Container -->
+        <div id="view-container">
+            
+            <!-- 1. Beranda (Home) -->
+            <section id="home-view" class="view">
+                <div class="card p-8 mb-8 text-center bg-red-700 text-white">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-2">Lindungi Aset Anda dengan FIMAX</h2>
+                    <p class="text-xl">Mitra Terpercaya Anda dalam Proteksi dan Pengisian Ulang Alat Pemadam Api Ringan (APAR).</p>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <button onclick="changeView('products')" class="bg-white text-red-700 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition">Lihat Produk</button>
+                        <button onclick="changeView('inquiry')" class="border border-white text-white font-semibold py-2 px-6 rounded-full hover:bg-red-800 transition">Minta Penawaran</button>
+                    </div>
+                </div>
+
+                <!-- Bagian Tentang Kami -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="card p-6">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4 border-b pb-2 border-red-200">Tentang Fire Safe Indonesia</h3>
+                        <p class="text-gray-600 mb-4">Fire Safe Indonesia adalah perusahaan nasional yang bergerak di bidang suplai dan distributor peralatan pemadam kebakaran dengan **Merek FIMAX**. Kami berkomitmen menyediakan perlengkapan proteksi kebakaran yang berkualitas 100% terjamin, mulai dari perencanaan, pengadaan, hingga instalasi sistem pemadam api.</p>
+                        <p class="text-gray-600 font-semibold">Visi Kami: Menjadi perusahaan global terkemuka dalam menyediakan perangkat keamanan aset dan manusia.</p>
+                        <p class="text-sm mt-4 italic text-gray-500">Kami berlokasi di Bekasi, siap melayani kebutuhan proteksi kebakaran Anda.</p>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-center items-center bg-gray-50">
+                        <!-- Gambar FIMAX APAR dari URL PNG yang dimasukkan sebelumnya -->
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/1JnT54FY/FIRE-SAFE.png" alt="FIRE-SAFE" border="0"></a>
+                             
+                        
+                        <p class="text-gray-500 text-sm">Produk APAR FIMAX untuk Kelas Kebakaran A, B, C, dan D.</p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan Produk APAR FIMAX -->
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Jenis-Jenis APAR FIMAX</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Dry Chemical Powder -->
+                    <div class="card p-6 text-center hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4 text-red-600">🔥</div>
+                        <h4 class="font-bold text-xl mb-2">Dry Chemical Powder</h4>
+                        <p class="text-gray-600 text-sm">Serbaguna untuk Kelas Kebakaran **A (Padat), B (Cair/Gas), dan C (Listrik)**. Bekerja dengan menyelimuti bahan yang terbakar.</p>
+                    </div>
+                    <!-- Carbon Dioxide (CO2) -->
+                    <div class="card p-6 text-center hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4 text-red-600">⚡</div>
+                        <h4 class="font-bold text-xl mb-2">Carbon Dioxide (CO2)</h4>
+                        <p class="text-gray-600 text-sm">Sangat cocok untuk Kelas Kebakaran **B (Cair/Gas) dan C (Listrik)**. Tidak meninggalkan residu sehingga aman untuk peralatan elektronik.</p>
+                    </div>
+                    <!-- Liquid Foam AFFF -->
+                    <div class="card p-6 text-center hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4 text-red-600">💧</div>
+                        <h4 class="font-bold text-xl mb-2">Liquid Foam AFFF</h4>
+                        <p class="text-gray-600 text-sm">Efektif untuk Kelas Kebakaran **A (Padat) dan B (Cair/Gas)**. Membentuk lapisan busa yang mendinginkan dan memutus suplai oksigen.</p>
+                    </div>
+                    <!-- Liquid Gas Clean Agent -->
+                    <div class="card p-6 text-center hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4 text-red-600">💨</div>
+                        <h4 class="font-bold text-xl mb-2">Liquid Gas Clean Agent</h4>
+                        <p class="text-gray-600 text-sm">Ramah lingkungan dan tidak meninggalkan residu. Cocok untuk Kelas Kebakaran **A, B, dan C** serta area sensitif seperti server.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Produk & Harga (Products) -->
+            <section id="products-view" class="view hidden">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Daftar Harga APAR FIMAX</h2>
+                <p class="mb-6 text-gray-600">Berikut adalah daftar harga tabung baru dan biaya pengisian ulang (Refilling) untuk APAR Merek FIMAX. Harga dapat berubah sewaktu-waktu dan belum termasuk PPN.</p>
+
+                <div id="price-list-container" class="space-y-8">
+                    <!-- Price tables will be inserted here by JavaScript -->
+                    <div class="text-center p-8 text-gray-500">Memuat data harga...</div>
+                </div>
+
+                <div class="mt-8 text-center p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <p class="text-sm text-yellow-800 font-medium">Catatan: Untuk tipe **Thermatic** dan produk Fire System lainnya (Hydrant Box, Fire Hose, dll), silakan hubungi kami untuk permintaan penawaran khusus.</p>
+                </div>
+            </section>
+
+            <!-- 3. Tanya Jawab APAR (QnA) -->
+            <section id="qna-view" class="view hidden">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Konsultasi Proteksi Kebakaran (Tanya Jawab APAR)</h2>
+                <p class="mb-6 text-gray-600">Masukkan pertanyaan Anda mengenai APAR, klasifikasi kebakaran, atau prosedur proteksi. Jawaban akan digali dari dokumen referensi teknis kami.</p>
+
+                <div class="card p-6">
+                    <label for="qna-input" class="block text-lg font-medium text-gray-700 mb-2">Pertanyaan Anda:</label>
+                    <textarea id="qna-input" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500" placeholder="Contoh: Apa itu Sistem Proteksi Kebakaran Aktif?"></textarea>
+                    <button id="qna-button" class="btn-primary mt-4 w-full md:w-auto flex items-center justify-center" onclick="getAnswer()">
+                        <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Tanyakan Sekarang
+                    </button>
+                    
+                    <div id="qna-output" class="mt-8 p-5 border-t border-red-200 pt-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jawaban Fire Safe Indonesia:</h3>
+                        <p class="text-gray-600 italic">Jawaban akan muncul di sini setelah Anda mengajukan pertanyaan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Permintaan Penawaran (Inquiry) -->
+            <section id="inquiry-view" class="view hidden">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 text-center">Permintaan Penawaran & Konsultasi</h2>
+                <div class="card p-10 max-w-2xl mx-auto text-center border-4 border-red-500 bg-red-50">
+                    <div class="text-5xl mb-4 text-red-700">💬</div>
+                    <p class="text-2xl font-semibold text-gray-800 mb-6">
+                        Untuk permintaan penawaran harga atau konsultasi proyek,
+                        silakan hubungi admin kami melalui WhatsApp di:
+                    </p>
+                    <a 
+                        href="https://wa.me/6281219965256?text=Halo%20Fire%20Safe%20Indonesia%2C%20saya%20ingin%20meminta%20penawaran%20mengenai%20APAR%20FIMAX." 
+                        target="_blank" 
+                        class="inline-flex items-center justify-center bg-green-600 text-white text-2xl font-bold py-4 px-8 rounded-xl hover:bg-green-700 transition duration-300 shadow-lg hover:shadow-xl"
+                    >
+                        <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><!-- Font Awesome WA Icon --><path d="M380.9 97.1C339.4 55.4 283.4 32 224.2 32c-121.7 0-220.9 98.6-220.9 220.3 0 39.5 10.9 77.4 31.7 111l-34.1 125.6 128.8-33.6c31 17.5 66.5 26.6 102.3 26.6 121.7 0 220.9-98.6 220.9-220.3 0-59.2-22.3-115.1-63.7-156.8zM224.2 419.3c-31.5 0-61.5-8.4-87.7-24l-6.3-3.7-65.7 17.1 17.1-64.2-4.1-6.5c-17.7-27.9-27.1-60.5-27.1-94.6 0-100 81.3-181.3 181.3-181.3 48.9 0 94.6 18.9 129.5 53.8 34.8 34.9 53.8 80.6 53.8 129.5 0 100-81.3 181.3-181.3 181.3zm122.3-132.3c-6.8-3.4-38.3-18.7-44.1-20.9-5.8-2.2-10-3.3-14.3 3.4-4.3 6.8-16.6 20.9-20.4 25.1-3.8 4.3-7.5 4.8-14 1.1-6.4-3.7-27.1-9.8-51.5-31.7-18.2-16.1-30.5-36-34.1-41.8-3.8-5.8-.4-9 2.9-11.4 3.1-2.4 6.8-5.8 10-8.6 3.1-2.9 4.3-4.8 6.4-9.1 2.2-4.3 1.1-7.9-.6-11.4-1.7-3.4-14.3-34.3-19.6-47-5.3-12.7-10.7-10.9-14.7-10.9-3.9 0-8.4-.5-12.8-.5s-11.2 1.7-17.1 8.6c-5.8 6.8-22.3 21.6-22.3 52.6 0 31 22.8 61 25.9 65.2 3.1 4.3 44.9 68.6 109.2 96.6 64.3 27.9 64.3 18.7 68.1 17.5 3.8-1.2 11.2-4.6 12.8-9.3s3.8-11.2 2.1-20.9c-1.7-9.7-6.8-16.1-13.6-20.9z"/></svg>
+                        0812 1996 5256
+                    </a>
+                    <p class="text-sm mt-4 text-gray-500">Tekan tombol di atas untuk langsung terhubung via WhatsApp (Nomor Admin).</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 mt-8">
+        <div class="max-w-7xl mx-auto text-center md:flex md:justify-between md:items-center">
+            <p class="text-sm">&copy; <span id="year"></span> Fire Safe Indonesia. Semua Hak Dilindungi.</p>
+            <div class="flex justify-center space-x-4 mt-3 md:mt-0">
+                <a href="#" class="hover:text-red-400 text-sm">Tentang Kami</a>
+                <a href="#" class="hover:text-red-400 text-sm">Kontak</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Custom Alert/Confirmation -->
+    <div id="custom-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="card p-6 w-11/12 max-w-md">
+            <h3 id="modal-title" class="text-xl font-bold mb-4 text-gray-800">Pesan</h3>
+            <p id="modal-body" class="text-gray-600 mb-6"></p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="btn-primary">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logics -->
+    <script type="module">
+        // --- Setup API Key and Base URL ---
+        const API_KEY = "";
+        const BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/";
+        
+        // --- Data from uploaded files (simulated for display) ---
+        const priceList = {
+            "DRY CHEMICAL POWDER (A, B, C)": [
+                {"CAPACITY": "1 KG", "TYPE": "PORTABLE", "PRICE": "329.000", "REFILLING": "41.000"},
+                {"CAPACITY": "4.5 KG", "TYPE": "PORTABLE", "PRICE": "690.000", "REFILLING": "184.500"},
+                {"CAPACITY": "9 KG", "TYPE": "PORTABLE", "PRICE": "1.035.000", "REFILLING": "369.000"},
+                {"CAPACITY": "25 KG", "TYPE": "TROLLY", "PRICE": "5.050.000", "REFILLING": "990.000"},
+                {"CAPACITY": "50 KG", "TYPE": "TROLLY", "PRICE": "7.650.000", "REFILLING": "1.920.000"}
+            ],
+            "CARBON DIOXIDE (CO2) (B & C)": [
+                {"CAPACITY": "2 KG", "TYPE": "PORTABLE", "PRICE": "986.000", "REFILLING": "118.000"},
+                {"CAPACITY": "5 KG", "TYPE": "PORTABLE", "PRICE": "1.760.000", "REFILLING": "232.000"},
+                {"CAPACITY": "9 KG", "TYPE": "TROLLY", "PRICE": "2.950.000", "REFILLING": "385.000"},
+                {"CAPACITY": "45 KG", "TYPE": "TROLLY", "PRICE": "11.400.000", "REFILLING": "1.550.000"}
+            ],
+            "LIQUID FOAM AFFF (A & B)": [
+                {"CAPACITY": "6 LTR", "TYPE": "PORTABLE", "PRICE": "785.000", "REFILLING": "170.000"},
+                {"CAPACITY": "9 LTR", "TYPE": "PORTABLE", "PRICE": "980.000", "REFILLING": "245.000"},
+                {"CAPACITY": "30 LTR", "TYPE": "TROLLY", "PRICE": "5.700.000", "REFILLING": "820.000"}
+            ],
+            "LIQUID GAS CLEAN AGENT (A, B, & C)": [
+                {"CAPACITY": "1 KG", "TYPE": "PORTABLE", "PRICE": "950.000", "REFILLING": "490.000"},
+                {"CAPACITY": "3 KG", "TYPE": "PORTABLE", "PRICE": "2.120.000", "REFILLING": "1.470.000"},
+                {"CAPACITY": "5 KG", "TYPE": "PORTABLE", "PRICE": "3.730.000", "REFILLING": "2.450.000"},
+                {"CAPACITY": "25 KG", "TYPE": "TROLLY", "PRICE": "18.625.000", "REFILLING": "12.250.000"}
+            ]
+        };
+
+        const ADMIN_EMAIL = "ahmad.madicken@gmail.com";
+        const ADMIN_PHONE = "6281219965256"; 
+
+
+        // --- Utility Functions ---
+
+        /** Menampilkan Custom Modal sebagai pengganti alert() */
+        function showModal(title, body) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = body;
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        /** Menutup Custom Modal */
+        window.closeModal = () => {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+        
+        /** Toggle mobile navigation menu (Dropdown) */
+        window.toggleNav = () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('hidden');
+        }
+
+        /** Mengubah tampilan/view berdasarkan klik navigasi */
+        window.changeView = (viewId) => {
+            document.querySelectorAll('.view').forEach(view => {
+                view.classList.add('hidden');
+            });
+            document.getElementById(`${viewId}-view`).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.nav-link[data-view="${viewId}"]`).classList.add('active');
+
+            // Tutup menu navigasi setelah mengklik tautan (hanya di mobile)
+            if (window.innerWidth < 768) { // 768px is Tailwind's 'md' breakpoint
+                document.getElementById('navbar').classList.add('hidden');
+            }
+        }
+        
+        /** Retry mechanism for API calls */
+        async function fetchWithRetry(url, options, retries = 3) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    // Exponential backoff: 1s, 2s, 4s delay
+                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+                }
+            }
+        }
+
+
+        // --- Page specific Logics ---
+
+        /** 1. Produk & Harga: Menampilkan tabel harga */
+        function renderPriceList() {
+            const container = document.getElementById('price-list-container');
+            container.innerHTML = ''; // Bersihkan konten
+
+            for (const [media, items] of Object.entries(priceList)) {
+                let html = `
+                    <div class="card p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-red-700">${media}</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-red-50">
+                                    <tr>
+                                        <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kapasitas</th>
+                                        <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipe</th>
+                                        <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Harga Baru (Rp)</th>
+                                        <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Refilling (Rp)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                `;
+                
+                items.forEach(item => {
+                    html += `
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">${item.CAPACITY}</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-600">${item.TYPE}</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-red-600 font-semibold">${item.PRICE}</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-green-600 font-semibold">${item.REFILLING}</td>
+                        </tr>
+                    `;
+                });
+
+                html += `
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            }
+        }
+
+        /** 2. Tanya Jawab APAR: Mengambil jawaban dari Gemini API dengan Grounding */
+        async function getAnswer() {
+            const inputElement = document.getElementById('qna-input');
+            const outputElement = document.getElementById('qna-output');
+            const buttonElement = document.getElementById('qna-button');
+            const spinner = document.getElementById('loading-spinner');
+            const userQuery = inputElement.value.trim();
+
+            if (!userQuery) {
+                showModal("Peringatan", "Silakan masukkan pertanyaan Anda terlebih dahulu.");
+                return;
+            }
+
+            // UI feedback
+            buttonElement.disabled = true;
+            spinner.classList.remove('hidden');
+            outputElement.innerHTML = `<p class="text-center text-red-500 italic">Mencari jawaban dari dokumen referensi, mohon tunggu...</p>`;
+            
+            try {
+                const model = "gemini-2.5-flash-preview-05-20";
+                const apiUrl = `${BASE_URL}${model}:generateContent?key=${API_KEY}`;
+                
+                const systemPrompt = "Anda adalah Asisten Ahli Proteksi Kebakaran Fire Safe Indonesia. Jawab pertanyaan pengguna dengan ringkas, jelas, dan profesional menggunakan data yang tersedia dari dokumen teknis yang diunggah. Jika tidak ada informasi yang relevan, berikan jawaban umum yang relevan dan anjurkan untuk kontak langsung. Selalu gunakan Bahasa Indonesia.";
+
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    tools: [{ "google_search": {} }], // Grounding for up-to-date/general context, but prioritizes uploaded files
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    config: {
+                         // This is crucial for accessing uploaded files
+                         "uploadedFiles": [
+                            {"contentFetchId": "uploaded:Company Profile AFI New-1 (1).pdf"},
+                            {"contentFetchId": "uploaded:PRICELIST FIREMAX NEW 2024 (1).pdf"},
+                            {"contentFetchId": "uploaded:10._BUKU_SAKU_PROTEKSI_KEBAKARAN_2022.pdf"}
+                        ]
+                    }
+                };
+
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    
+                    let sourcesHtml = '';
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        const sources = groundingMetadata.groundingAttributions
+                            .map(attr => attr.web?.title || attr.file?.title || 'Dokumen Referensi')
+                            .filter((value, index, self) => self.indexOf(value) === index); // Unique titles
+
+                        if (sources.length > 0) {
+                            sourcesHtml = `<div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                                <p class="text-xs font-semibold text-red-700">Sumber Informasi (Digali dari Dokumen Anda):</p>
+                                <ul class="list-disc list-inside text-xs text-gray-600">${sources.map(s => `<li>${s}</li>`).join('')}</ul>
+                            </div>`;
+                        }
+                    }
+
+                    outputElement.innerHTML = `
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jawaban Fire Safe Indonesia:</h3>
+                        <div class="prose max-w-none text-gray-700">${text.replace(/\n/g, '<br>')}</div>
+                        ${sourcesHtml}
+                    `;
+
+                } else {
+                    outputElement.innerHTML = `<p class="text-red-600 font-medium">Maaf, kami tidak dapat memproses permintaan Anda saat ini. Silakan coba lagi atau hubungi tim kami secara langsung.</p>`;
+                }
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                outputElement.innerHTML = `<p class="text-red-600 font-medium">Terjadi kesalahan koneksi. Silakan periksa koneksi internet Anda dan coba lagi.</p>`;
+            } finally {
+                buttonElement.disabled = false;
+                spinner.classList.add('hidden');
+            }
+        }
+        window.getAnswer = getAnswer; // Export ke global scope
+
+        /** 3. Permintaan Penawaran: Fungsi handleInquiry dihapus, karena sekarang hanya menampilkan link WhatsApp */
+        /* window.handleInquiry = ... (Fungsi ini dihapus) */
+
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set tahun di footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Render tabel harga
+            renderPriceList();
+            
+            // Setup navigasi
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    const viewId = link.getAttribute('data-view');
+                    changeView(viewId);
+                });
+            });
+            
+            // Set view awal ke Beranda
+            changeView('home');
+        });
+
+    </script>
+</body>
+</html>

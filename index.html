@@ -709,7 +709,7 @@ select.form-input { cursor: pointer; }
         <button onclick="showPage('panduan')" id="nav-panduan" class="nav-link">Panduan APAR</button>
         <button onclick="showPage('kalkulator')" id="nav-kalkulator" class="nav-link">Kalkulator</button>
         <button onclick="showPage('tracker')" id="nav-tracker" class="nav-link">Tracker Servis</button>
-        <button onclick="showPage('chatbox')" id="nav-chatbox" class="nav-link">Tanya AI</button>
+        <button onclick="showPage('chatbox')" id="nav-chatbox" class="nav-link">Tanya Kami (FAQ)</button>
         <a href="#form-kontak" onclick="showPage('home')" class="btn-primary px-5 py-2.5">Minta Penawaran</a>
       </div>
       <!-- MOBILE HAMBURGER -->
@@ -727,7 +727,7 @@ select.form-input { cursor: pointer; }
       <button onclick="showPage('panduan'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-red-50 hover:text-red-600 transition text-sm uppercase tracking-wide">Panduan APAR</button>
       <button onclick="showPage('kalkulator'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-red-50 hover:text-red-600 transition text-sm uppercase tracking-wide">Kalkulator</button>
       <button onclick="showPage('tracker'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-red-50 hover:text-red-600 transition text-sm uppercase tracking-wide">Tracker Servis</button>
-      <button onclick="showPage('chatbox'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-red-50 hover:text-red-600 transition text-sm uppercase tracking-wide">Tanya AI</button>
+      <button onclick="showPage('chatbox'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-red-50 hover:text-red-600 transition text-sm uppercase tracking-wide">Tanya Kami (FAQ)</button>
       <a href="#form-kontak" onclick="showPage('home'); toggleMobileMenu()" class="block w-full text-center px-4 py-3 bg-red-600 text-white rounded-lg font-bold text-sm uppercase tracking-wide mb-2">Minta Penawaran</a>
     </div>
   </div>
@@ -795,16 +795,16 @@ select.form-input { cursor: pointer; }
         <!-- RIGHT: Fire Triangle Visual -->
         <div class="flex justify-center lg:justify-end fade-up delay-2">
           <div class="relative">
-            <svg class="w-64 h-64 sm:w-80 sm:h-80" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon class="tri-fill" points="110,20 200,185 20,185" fill="rgba(220,38,38,0.08)" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round"/>
-              <circle class="tri-dot" cx="110" cy="20" r="6" fill="#dc2626"/>
-              <circle class="tri-dot" cx="20" cy="185" r="6" fill="#dc2626"/>
-              <circle class="tri-dot" cx="200" cy="185" r="6" fill="#dc2626"/>
-              <text x="110" y="14" text-anchor="middle" font-family="Bebas Neue" font-size="10" fill="#dc2626" letter-spacing="1">PANAS</text>
-              <text x="10" y="200" text-anchor="middle" font-family="Bebas Neue" font-size="10" fill="#dc2626" letter-spacing="1">BAHAN BAKAR</text>
-              <text x="210" y="200" text-anchor="end" font-family="Bebas Neue" font-size="10" fill="#dc2626" letter-spacing="1">OKSIGEN</text>
-              <text x="110" y="108" text-anchor="middle" font-family="Bebas Neue" font-size="22" fill="#dc2626" letter-spacing="2" class="tri-api-text">SEGITIGA API</text>
-              <text x="110" y="128" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6b7280">Hilangkan satu unsur = padamkan api</text>
+            <svg class="w-64 h-64 sm:w-80 sm:h-80" viewBox="0 0 280 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon class="tri-fill" points="140,22 250,190 30,190" fill="rgba(220,38,38,0.08)" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle class="tri-dot" cx="140" cy="22" r="6" fill="#dc2626"/>
+              <circle class="tri-dot" cx="30" cy="190" r="6" fill="#dc2626"/>
+              <circle class="tri-dot" cx="250" cy="190" r="6" fill="#dc2626"/>
+              <text x="140" y="14" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#dc2626" letter-spacing="1">PANAS</text>
+              <text x="30" y="210" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#dc2626" letter-spacing="1">BAHAN BAKAR</text>
+              <text x="250" y="210" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#dc2626" letter-spacing="1">OKSIGEN</text>
+              <text x="140" y="112" text-anchor="middle" font-family="Bebas Neue" font-size="22" fill="#dc2626" letter-spacing="2" class="tri-api-text">SEGITIGA API</text>
+              <text x="140" y="132" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6b7280">Hilangkan satu unsur = padamkan api</text>
               <g class="tri-flame">
                 <path d="M18,26 C18,16 8,12 8,4 C4,10 0,16 2,24 C0,22 0,14 4,10 C4,18 10,22 12,26 C12,20 8,16 10,10 C14,16 20,20 18,26Z" fill="#ef4444"/>
               </g>
@@ -848,7 +848,7 @@ select.form-input { cursor: pointer; }
           <div class="feat-icon">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
           </div>
-          <h3 class="font-bold text-gray-900 text-base mb-1" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;font-size:1.1rem;">Tanya AI</h3>
+          <h3 class="font-bold text-gray-900 text-base mb-1" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;font-size:1.1rem;">Tanya Kami (FAQ)</h3>
           <p class="text-gray-400 text-sm">Chatbot konsultasi proteksi kebakaran 24/7</p>
         </button>
       </div>
@@ -930,19 +930,19 @@ select.form-input { cursor: pointer; }
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-input" placeholder="Budi Santoso">
+            <input type="text" id="form-nama" class="form-input" placeholder="Budi Santoso">
           </div>
           <div>
             <label class="form-label">No. WhatsApp</label>
-            <input type="tel" class="form-input" placeholder="08123456789">
+            <input type="tel" id="form-wa" class="form-input" placeholder="08123456789">
           </div>
           <div>
             <label class="form-label">Nama Perusahaan</label>
-            <input type="text" class="form-input" placeholder="PT. Maju Bersama">
+            <input type="text" id="form-perusahaan" class="form-input" placeholder="PT. Maju Bersama">
           </div>
           <div>
             <label class="form-label">Jenis Kebutuhan</label>
-            <select class="form-input">
+            <select id="form-kebutuhan" class="form-input">
               <option value="">Pilih kebutuhan...</option>
               <option>Beli APAR Baru</option>
               <option>Isi Ulang / Servis</option>
@@ -952,7 +952,7 @@ select.form-input { cursor: pointer; }
           </div>
           <div class="sm:col-span-2">
             <label class="form-label">Pesan / Keterangan</label>
-            <textarea class="form-input" rows="4" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+            <textarea id="form-pesan" class="form-input" rows="4" placeholder="Ceritakan kebutuhan Anda..."></textarea>
           </div>
         </div>
         <button onclick="submitForm()" class="btn-primary w-full py-4 mt-6 rounded-xl text-base">Kirim Permintaan Penawaran</button>
@@ -974,7 +974,7 @@ select.form-input { cursor: pointer; }
           <button onclick="showPage('panduan')" class="hover:text-white transition">Panduan APAR</button>
           <button onclick="showPage('kalkulator')" class="hover:text-white transition">Kalkulator</button>
           <button onclick="showPage('tracker')" class="hover:text-white transition">Tracker</button>
-          <button onclick="showPage('chatbox')" class="hover:text-white transition">Tanya AI</button>
+          <button onclick="showPage('chatbox')" class="hover:text-white transition">Tanya Kami (FAQ)</button>
         </div>
         <p class="text-sm">© 2025 firesafeindonesia.online</p>
       </div>
@@ -1447,7 +1447,7 @@ select.form-input { cursor: pointer; }
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
           </div>
           <div>
-            <h1 class="text-2xl text-gray-900 font-bold" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;">Tanya AI Proteksi Kebakaran</h1>
+            <h1 class="text-2xl text-gray-900 font-bold" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;">Tanya Kami (FAQ) Proteksi Kebakaran</h1>
             <p class="text-gray-400 text-sm">Konsultan virtual K3 & APAR — siap 24/7</p>
           </div>
           <div class="ml-auto flex items-center gap-2">
@@ -1473,6 +1473,9 @@ select.form-input { cursor: pointer; }
             <button class="chat-quick-btn" onclick="kirimChat('APAR apa yang cocok untuk server room?')">APAR untuk server room</button>
             <button class="chat-quick-btn" onclick="kirimChat('Apa perbedaan APAR CO₂ dan powder?')">CO₂ vs Powder</button>
             <button class="chat-quick-btn" onclick="kirimChat('Berapa harga isi ulang APAR?')">Harga refill APAR</button>
+            <button class="chat-quick-btn" onclick="kirimChat('Kapan APAR harus diisi ulang?')">Kapan harus refill?</button>
+            <button class="chat-quick-btn" onclick="kirimChat('Apakah APAR wajib ada di kantor dan toko?')">Wajib di kantor?</button>
+            <button class="chat-quick-btn" onclick="kirimChat('Di mana lokasi terbaik menempatkan APAR?')">Lokasi terbaik APAR</button>
           </div>
         </div>
 
@@ -1527,7 +1530,30 @@ function toggleMobileMenu() {
 }
 
 function submitForm() {
-  alert('Terima kasih! Tim Fire Safe Indonesia akan menghubungi Anda segera.');
+  const nama       = (document.getElementById('form-nama')?.value || '').trim();
+  const wa         = (document.getElementById('form-wa')?.value || '').trim();
+  const perusahaan = (document.getElementById('form-perusahaan')?.value || '').trim();
+  const kebutuhan  = (document.getElementById('form-kebutuhan')?.value || '').trim();
+  const pesan      = (document.getElementById('form-pesan')?.value || '').trim();
+
+  if (!nama || !wa) {
+    alert('Mohon isi minimal Nama Lengkap dan No. WhatsApp.');
+    return;
+  }
+
+  const msg = [
+    '🔥 *Permintaan Penawaran — Fire Safe Indonesia*',
+    '',
+    `👤 *Nama:* ${nama}`,
+    wa         ? `📱 *No. WA:* ${wa}`          : null,
+    perusahaan ? `🏢 *Perusahaan:* ${perusahaan}` : null,
+    kebutuhan  ? `📋 *Kebutuhan:* ${kebutuhan}`   : null,
+    pesan      ? `💬 *Keterangan:* ${pesan}`       : null,
+    '',
+    '_Dikirim via firesafeindonesia.online_'
+  ].filter(l => l !== null).join('\n');
+
+  window.open('https://wa.me/6287794672327?text=' + encodeURIComponent(msg), '_blank');
 }
 
 // ==============================
@@ -2096,12 +2122,15 @@ let chatMessages = [];
 
 const KB = {
   'apa_itu_apar': 'APAR (Alat Pemadam Api Ringan) adalah perangkat pemadam kebakaran portabel yang bisa dioperasikan satu orang. Cara kerjanya: tekanan internal mendorong agen pemadam keluar melalui nozzle ke sumber api. Ada beberapa jenis media: <b>Dry Powder ABC</b> (paling umum), <b>CO₂</b> (untuk peralatan elektronik), <b>AFFF Foam</b> (untuk cairan), dan <b>Wet Chemical K</b> (khusus dapur). Setiap gedung wajib memiliki APAR sesuai SNI 03-3987.',
-  'masa_pakai': 'Masa pakai APAR bergantung jenisnya:<br>• <b>Dry Powder</b> — isi ulang setiap <b>5 tahun</b>, tabung bisa dipakai 10–20 tahun jika kondisi baik<br>• <b>CO₂</b> — isi ulang setiap <b>3 tahun</b> atau jika berat isi berkurang lebih dari 10%<br>• <b>Inspeksi rutin</b> setiap bulan: cek jarum pressure gauge di zona hijau, pin masih terpasang, nozzle tidak tersumbat<br>• <b>Servis tahunan</b> wajib oleh teknisi bersertifikat. APAR yang sudah digunakan meski sebagian harus segera diisi ulang!',
+  'masa_pakai': 'Tabung APAR tidak memiliki <b>"expired"</b> seperti makanan, tetapi:<br><br>• Harus <b>diperiksa rutin</b><br>• Wajib <b>refill setelah digunakan</b><br>• Perlu <b>hydrotest berkala</b><br>• Isi APAR umumnya dicek minimal <b>setiap tahun</b><br><br>Hubungi <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">tim kami</a> untuk jadwal inspeksi dan servis.',
   'server_room': 'Untuk <b>server room dan ruang panel listrik</b>, pilih APAR jenis <b>CO₂ (Carbon Dioxide)</b>. Alasannya:<br>• Tidak meninggalkan residu — peralatan elektronik tetap aman<br>• Tidak menghantarkan listrik — aman untuk kebakaran Kelas C<br>• Tidak merusak data storage atau komponen sensitif<br><br>⚠️ Jangan pakai APAR Dry Powder di server room — serbuknya korosif dan bisa merusak semua peralatan elektronik secara permanen. Disarankan minimal 2 unit CO₂ 5kg per ruang server.',
   'co2_vs_powder': 'Perbandingan <b>CO₂ vs Dry Powder</b>:<br><br><b>CO₂:</b><br>✓ Tidak ada residu, aman untuk elektronik<br>✓ Tidak menghantarkan listrik<br>✗ Lebih mahal, jangkauan lebih pendek<br>✗ Berbahaya di ruang tertutup tanpa ventilasi<br><br><b>Dry Powder ABC:</b><br>✓ Harga terjangkau, efektif multi-kelas (A, B, C)<br>✓ Jangkauan lebih jauh<br>✗ Meninggalkan residu serbuk yang korosif<br>✗ Merusak peralatan elektronik<br><br><b>Kesimpulan:</b> Server room / laboratorium → CO₂. Kantor umum / gudang / kendaraan → Dry Powder.',
   'harga_refill': 'Harga belum termasuk PPn · Dapat berubah sewaktu-waktu<br><br><b>Isi Ulang (Refilling):</b><br>• Powder 1 kg — <b>Rp 41.000</b><br>• Powder 3 kg — <b>Rp 123.000</b><br>• Powder 6 kg — <b>Rp 246.000</b><br>• Powder 9 kg — <b>Rp 369.000</b><br>• CO₂ 3 kg — <b>Rp 160.000</b><br>• CO₂ 5 kg — <b>Rp 232.000</b><br>• AFFF Foam 6 L — <b>Rp 170.000</b><br><br><b>Harga Tabung Baru:</b><br>• Powder 1 kg — <b>Rp 329.000</b><br>• Powder 3 kg — <b>Rp 543.000</b><br>• Powder 6 kg — <b>Rp 789.000</b><br>• CO₂ 3 kg — <b>Rp 1.282.000</b><br>• CO₂ 5 kg — <b>Rp 1.760.000</b><br>• Clean Agent 3 kg — <b>Rp 2.120.000</b><br><br>Harga dapat berubah sewaktu-waktu. <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">Hubungi kami via WhatsApp</a> untuk penawaran & faktur resmi!',
   'cara_pakai': 'Cara menggunakan APAR dengan metode <b>P.A.S.S.</b>:<br><br>🔴 <b>P — Pull</b>: Cabut pin pengaman (safety pin) dari handle<br>🟠 <b>A — Aim</b>: Arahkan nozzle ke <u>pangkal / bagian bawah</u> api, bukan ke atas asap<br>🟡 <b>S — Squeeze</b>: Tekan handle dengan kuat untuk menyemprotkan agen pemadam<br>🟢 <b>S — Sweep</b>: Sapukan nozzle dari kiri ke kanan hingga api padam<br><br>⚠️ <b>Tips keselamatan:</b> Selalu berdiri dengan punggung menghadap pintu keluar. Jaga jarak 2–3 meter dari api. Jika api tidak padam dalam 30 detik, <b>segera evakuasi</b> dan hubungi Damkar <b>113</b>.',
-  'default': 'Terima kasih sudah bertanya! Saya siap membantu tentang:<br>🔥 Jenis &amp; cara penggunaan APAR<br>📋 Regulasi K3 &amp; standar SNI<br>🔧 Jadwal servis &amp; masa pakai<br>💰 Harga isi ulang &amp; APAR baru<br><br>Coba ketik pertanyaan lebih spesifik, atau <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">chat langsung dengan tim kami di WhatsApp</a> untuk konsultasi oleh ahli K3 bersertifikat.'
+  'kapan_refill': 'APAR harus <b>refill</b> jika:<br><br>• Sudah digunakan walaupun sedikit<br>• Tekanan turun (jarum di luar zona hijau)<br>• Masa inspeksi habis<br>• Ada kerusakan pada segel atau tabung<br><br>Pemeriksaan rutin sangat penting agar APAR siap digunakan saat darurat. <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">Hubungi kami</a> untuk jadwal servis.',
+  'wajib_kantor': 'Ya. Banyak bangunan usaha <b>diwajibkan memiliki APAR</b> sebagai bagian dari sistem proteksi kebakaran dan persyaratan K3 sesuai regulasi keselamatan kerja.<br><br>Dasar hukum: <b>Permenaker No. 4/1980</b> dan <b>SNI 03-3987-1995</b>. Kantor, toko, pabrik, hotel, rumah sakit — semua termasuk objek wajib. <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">Konsultasikan kebutuhan gedung Anda.</a>',
+  'lokasi_apar': 'APAR sebaiknya ditempatkan:<br><br>📍 <b>Mudah terlihat</b> — tidak tersembunyi di balik lemari atau sudut gelap<br>🤚 <b>Mudah dijangkau</b> — ketinggian handle 120–150 cm dari lantai<br>🚪 <b>Dekat jalur evakuasi</b> — pintu keluar, koridor utama<br>📦 <b>Tidak terhalang barang</b> — area sekitar APAR harus bebas<br>⚠️ <b>Sesuai titik risiko kebakaran</b> — dapur, panel listrik, server room<br><br>Pasang <b>tanda APAR</b> yang terlihat jelas dari jarak jauh.',
+    'default': 'Terima kasih sudah bertanya! Saya siap membantu tentang:<br>🔥 Jenis &amp; cara penggunaan APAR<br>📋 Regulasi K3 &amp; standar SNI<br>🔧 Jadwal servis &amp; masa pakai<br>💰 Harga isi ulang &amp; APAR baru<br><br>Coba ketik pertanyaan lebih spesifik, atau <a href="https://wa.me/6287794672327" target="_blank" style="color:#dc2626;font-weight:700;">chat langsung dengan tim kami di WhatsApp</a> untuk konsultasi oleh ahli K3 bersertifikat.'
 };
 
 function getAIResponse(text) {
@@ -2113,6 +2142,9 @@ function getAIResponse(text) {
   if (q === 'apar apa yang cocok untuk server room?') return KB['server_room'];
   if (q === 'apa perbedaan apar co₂ dan powder?') return KB['co2_vs_powder'];
   if (q === 'berapa harga isi ulang apar?') return KB['harga_refill'];
+  if (q === 'kapan apar harus diisi ulang?') return KB['kapan_refill'];
+  if (q === 'apakah apar wajib ada di kantor dan toko?') return KB['wajib_kantor'];
+  if (q === 'di mana lokasi terbaik menempatkan apar?') return KB['lokasi_apar'];
 
   // --- Fallback untuk teks bebas / typo ---
   const isVsCo2Powder = (q.includes('beda') || q.includes('perbandingan') || q.includes('vs') || q.includes('perbedaan')) && (q.includes('co') || q.includes('powder'));
@@ -2126,6 +2158,15 @@ function getAIResponse(text) {
 
   const isHarga = (q.includes('harga') || q.includes('biaya') || q.includes('berapa') || q.includes('tarif') || q.includes('refill') || q.includes('isi ulang'));
   if (isHarga) return KB['harga_refill'];
+
+  const isKapanRefill = q.includes('kapan') || q.includes('harus diisi') || q.includes('wajib refill') || q.includes('segel') || q.includes('hydrotest');
+  if (isKapanRefill) return KB['kapan_refill'];
+
+  const isWajib = (q.includes('wajib') || q.includes('diwajibkan') || q.includes('harus ada')) && (q.includes('kantor') || q.includes('toko') || q.includes('gedung') || q.includes('bangunan'));
+  if (isWajib) return KB['wajib_kantor'];
+
+  const isLokasi = q.includes('lokasi') || q.includes('dimana') || q.includes('di mana') || q.includes('tempat') || q.includes('pasang') || q.includes('letak');
+  if (isLokasi) return KB['lokasi_apar'];
 
   const isCaraPakai = (q.includes('cara') && (q.includes('pakai') || q.includes('guna') || q.includes('pake'))) || q.includes('pass') || q.includes('pull') || q.includes('sweep');
   if (isCaraPakai) return KB['cara_pakai'];
